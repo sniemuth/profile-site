@@ -4,7 +4,7 @@ export class WorkRecord {
   title: string;
   startDate: Date;
   endDate: Date;
-  technologies: string[];
+  technologies: string[] = [];
   summary: string;
-  keyAchieviements: string[];
+  keyAchieviements: string[] = [];
 }

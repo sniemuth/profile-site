@@ -1,0 +1,51 @@
+<h1>{{name}}</h1>
+<div class="contact-info">
+<span class="intro">email</span>
+<span class="content">{{email}}</span>
+
+<span class="intro">skype</span>
+<span class="content">{{skype}}</span>
+  </div>
+
+  <div class="summary-highlights">
+    <h2>Profile</h2>
+<ul class="profile-highlights">
+  <li class="highlight" *ngFor="let profileHighlight of profileHighlights">
+    {{profileHighlight}}
+  </li>
+</ul>
+  </div>
+
+
+  <div class="technical-skills-matrix">
+    <h2>Key Technical Skills</h2>
+<table class="technical-skills">
+  <tr *ngFor="let technicalSkillsMatrixItem of technicalSkillsMatrix">
+    <td class="matrix-item-name">{{technicalSkillsMatrixItem.name}}</td>
+    <td class="technologies">
+     <button  *ngFor="let technology of technicalSkillsMatrixItem.technologies"  (click)="onSelect(technology)" [class.selected]="technology === selectedTechnology">
+{{technology}}
+</button>
+</td>
+
+  </tr>
+</table>
+    </div>
+
+
+    <div *ngIf="selectedTechnology">
+<h2>Relevant work records</h2>
+  <div class="highlight" *ngFor="let workRecord of relevantWorkRecords">
+    {{displayHtml(workRecord.company, selectedTechnology)}}
+  </div>
+
+    </div>
+
+
+    <div *ngIf="!selectedTechnology">
+<h2>All work records</h2>
+  <div class="highlight" *ngFor="let workRecord of allWorkRecords">
+    {{workRecord.company}}
+  </div>
+
+    </div>

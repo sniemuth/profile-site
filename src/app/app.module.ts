@@ -14,13 +14,15 @@ import { WorkRecordsComponent }     from './work-records.component';
 import { WorkRecordService }         from './work-record.service';
 import { DashboardComponent }  from './dashboard.component';
 import { AppRoutingModule }     from './app-routing.module';
+import { CvSummaryComponent } from './cv-summary/cv-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkRecordDetailComponent,
     WorkRecordsComponent,  
-    DashboardComponent,  
+    DashboardComponent, 
+    CvSummaryComponent,  
   ],
   imports: [
     BrowserModule,
