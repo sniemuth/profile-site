@@ -9,17 +9,17 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent }     from './heroes.component';
-import { HeroService }         from './hero.service';
+import { WorkRecordDetailComponent } from './work-record-detail.component';
+import { WorkRecordsComponent }     from './work-records.component';
+import { WorkRecordService }         from './work-record.service';
 import { DashboardComponent }  from './dashboard.component';
 import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent,
-    HeroesComponent,  
+    WorkRecordDetailComponent,
+    WorkRecordsComponent,  
     DashboardComponent,  
   ],
   imports: [
@@ -29,7 +29,7 @@ import { AppRoutingModule }     from './app-routing.module';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule   
   ],
-  providers: [ HeroService ],
+  providers: [ WorkRecordService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

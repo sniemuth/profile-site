@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { WorkRecord } from './work-record';
+import { WorkRecordService } from './work-record.service';
 
 @Component({
   moduleId: module.id,
@@ -11,12 +11,12 @@ import { HeroService } from './hero.service';
 })
 export class DashboardComponent implements OnInit {
 
-  heroes: Hero[] = [];
+  workRecords: WorkRecord[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private workRecordService: WorkRecordService) { }
 
   ngOnInit(): void {
-    this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
+    this.workRecordService.getWorkRecords()
+      .then(workRecords => this.workRecords = workRecords.slice(1, 5));
   }
 }

@@ -1,9 +1,9 @@
 
-<h3>Top Heroes</h3>
+<h3>Top Work Records</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let hero of heroes"  [routerLink]="['/detail', hero.id]" class="col-1-4">
+  <a *ngFor="let workRecord of workRecords"  [routerLink]="['/detail', workRecord.id]" class="col-1-4">
     <div class="module hero">
-      <h4>{{hero.name}}</h4>
+      <h4>{{workRecord.company}}</h4>
     </div>
   </a>
 </div>
