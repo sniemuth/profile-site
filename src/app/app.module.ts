@@ -9,19 +9,15 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { WorkRecordDetailComponent } from './work-record-detail.component';
-import { WorkRecordsComponent }     from './work-records.component';
+import { WorkRecordDetailComponent } from './work-record-detail/work-record-detail.component';
 import { WorkRecordService }         from './work-record.service';
-import { DashboardComponent }  from './dashboard.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { CvSummaryComponent } from './cv-summary/cv-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorkRecordDetailComponent,
-    WorkRecordsComponent,  
-    DashboardComponent, 
+    WorkRecordDetailComponent, 
     CvSummaryComponent,  
   ],
   imports: [

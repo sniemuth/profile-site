@@ -1,0 +1,27 @@
+<div *ngIf="workRecord">
+  <h3 class="dates">{{ workRecord.startDate | date:"MMMM yyyy" }} - {{ workRecord.endDate | date:"MMMM yyyy" }}</h3>
+  <h3 class="company">{{workRecord.company}}</h3>
+  <h4 class="title">{{workRecord.title}}</h4>
+
+  <div class="work-record-technologies">
+    Technologies:
+    <ng-container *ngFor="let wrTechnology of workRecord.technologies; let isLast=last">
+      <span *ngIf="technology == wrTechnology">
+      <b>{{wrTechnology}}</b></span>
+       <span *ngIf="technology != wrTechnology">
+      {{wrTechnology}}</span>{{isLast ? '' : ', '}}
+    </ng-container>
+  </div>
+  <p>{{displayHtml(workRecord.summary)}}</p>
+</div>
+
+<h4 class="key-achieviements-header">Key Achievements</h4>
+<div class="key-achievements-wrapper">
+  <ul>
+    <ng-container *ngFor="let keyAchievement of workRecord.keyAchievements">
+      <li *ngIf="shouldDisplay(keyAchievement)">
+        {{displayHtml(keyAchievement)}}
+      </li>
+    </ng-container>
+  </ul>
+</div>
