@@ -6,14 +6,16 @@ import { WorkRecord } from './work-record';
 
 @Injectable()
 export class WorkRecordService {
-  private workRecordUrl = 'api/workrecords';  // URL to web api
+  private workRecordUrl = 'http://madebysethcvapiweb20170311075832.azurewebsites.net/api/workrecords';  // URL to web api
 
   constructor(private http: Http) { }
 
   getWorkRecords(): Promise<WorkRecord[]> {
     return this.http.get(this.workRecordUrl)
                .toPromise()
-               .then(response => response.json().data as WorkRecord[])
+               .then(               
+                   response => response.json() as WorkRecord[]
+               )
                .catch(this.handleError);
   }
 
