@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MadeBySeth.Cv.Api.Core\MadeBySeth.Cv.Api.Core.csproj" />
+    <ProjectReference Include="..\MadeBySeth.Cv.Data\MadeBySeth.Cv.Data.csproj" />
+  </ItemGroup>
+
+</Project>
