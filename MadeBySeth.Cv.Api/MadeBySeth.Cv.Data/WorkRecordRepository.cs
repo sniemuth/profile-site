@@ -8,9 +8,9 @@ namespace MadeBySeth.Cv.Data
     public class WorkRecordRepository : IWorkRecordRepository
     {
         /// <summary>
-        /// Currently just hardcoded
+        /// Currently just hardcoded rather than coming from a data source
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List of work records</returns>
         public async Task<IEnumerable<WorkRecord>> GetAll()
         {
             return new List<WorkRecord>

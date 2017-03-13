@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace MadeBySeth.Cv.Api.Core
 {
+    /// <summary>
+    /// Work record/work experience and everything associated with them
+    /// </summary>
     public class WorkRecord
     {
         public int Id { get; set; }

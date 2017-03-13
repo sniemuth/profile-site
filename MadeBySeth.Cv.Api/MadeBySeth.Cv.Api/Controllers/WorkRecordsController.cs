@@ -23,6 +23,7 @@ namespace MadeBySeth.Cv.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<WorkRecord>> Get()
         {
+            // Call service to retrieve all the work records
             return await _workRecordService.GetAll();
         }        
     }

@@ -30,10 +30,11 @@ namespace MadeBySeth.Cv.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add cors call for the web api so that it can be called from angular on madebyseth domain
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
-                    builder => builder.WithOrigins("http://madebyseth.com", "https://madebyseth.com", "http://angular.madebyseth.com", "https://angular.madebyseth.com")
+                    builder => builder.WithOrigins("http://madebyseth.com", "https://madebyseth.com", "http://angular.madebyseth.com", "https://angular.madebyseth.com", "http://localhost:4200")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
@@ -42,7 +43,7 @@ namespace MadeBySeth.Cv.Api
             // Add framework services.
             services.AddMvc();
            
-
+            // Add DI
             services.AddTransient<IWorkRecordRepository, WorkRecordRepository>();
             services.AddTransient<IWorkRecordService, WorkRecordService>();
         }
@@ -52,8 +53,9 @@ namespace MadeBySeth.Cv.Api
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-            app.UseCors("CorsPolicy");
 
+            // Call Cors before MVC
+            app.UseCors("CorsPolicy");
             app.UseMvc();
         }
     }

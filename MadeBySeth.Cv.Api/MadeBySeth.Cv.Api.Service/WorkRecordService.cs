@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MadeBySeth.Cv.Api.Service
 {
+    /// <summary>
+    /// Service for the work records
+    /// </summary>
     public class WorkRecordService : IWorkRecordService
     {
         private readonly IWorkRecordRepository _workRecordRepository;
