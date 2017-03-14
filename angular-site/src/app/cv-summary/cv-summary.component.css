@@ -1,3 +1,48 @@
+h1
+{
+float: right;
+text-transform: uppercase;
+}
+
+h2{
+    margin: 40px 0 20px;
+}
+
+.contact-info
+{
+    clear: both;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.contact-info span
+{
+    float: left;
+}
+
+.contact-info span.intro
+{
+    color: #888;
+}
+
+.contact-info span.content
+{
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+h2
+{
+clear: both;
+}
+
+.technologies button
+{
+    margin-right: 5px;
+}
+
 .technologies button.selected
 {
      background-color: #CFD8DC !important;

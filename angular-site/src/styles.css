@@ -1,24 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 /* Master Styles */
 h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #972323;
+  font-family: 'Londrina Solid',Georgia,Serif;
   font-size: 250%;
+  letter-spacing: 5px;
+  margin-top: 0;
 }
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
+h2 {  
+  font-family: 'Headland One',Arial,serif;
   font-weight: lighter;
 }
+
+h2 {
+  color: #234b7b;
+}
+
+h3
+{
+  color: #444;
+}
+
 body {
   margin: 2em;
+  background: #f1f1f1 url(http://madebyseth.com/css/images/satinweave.png);
 }
 body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
+  color: #000;
 }
 /* . . . */
 /* everywhere else */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Headland One',Arial,serif;
+  box-sizing: border-box;
+}
+
+
+/* Grid layout */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }

@@ -1,3 +1,35 @@
+.work-record
+{
+  margin-top: 10px;
+  border-top: 1px solid #234b7b;
+}
+
+h3 {
+font-size: 1em;
+}
+
+h3.dates
+{
+  float:left;
+}
+
+h3.company
+{
+  float:right;
+}
+
+h4.title
+{
+  clear: both;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.work-record-technologies
+{
+   font-weight: bold;
+}
+
 label {
   display: inline-block;
   width: 3em;
