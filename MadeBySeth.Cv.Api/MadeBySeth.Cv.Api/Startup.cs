@@ -34,7 +34,7 @@ namespace MadeBySeth.Cv.Api
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
-                    builder => builder.WithOrigins("http://madebyseth.com", "https://madebyseth.com", "http://angular.madebyseth.com", "https://angular.madebyseth.com", "http://localhost:4200")
+                    builder => builder.WithOrigins("http://madebyseth.com", "https://madebyseth.com", "http://angular.madebyseth.com", "https://angular.madebyseth.com")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());

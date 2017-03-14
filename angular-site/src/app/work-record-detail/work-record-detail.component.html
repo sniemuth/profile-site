@@ -14,14 +14,16 @@
   </p>
   <p>{{displayHtml(workRecord.summary)}}</p>
 
+  <ng-container *ngIf="workRecord.keyAchievements.length > 0">
   <h4 class="key-achieviements-header">Key Achievements</h4>
   <div class="key-achievements-wrapper">
     <ul>
       <ng-container *ngFor="let keyAchievement of workRecord.keyAchievements">
-        <li *ngIf="shouldDisplay(keyAchievement)">
+        <li>
           {{displayHtml(keyAchievement)}}
         </li>
       </ng-container>
     </ul>
   </div>
+  </ng-container>
 </div>

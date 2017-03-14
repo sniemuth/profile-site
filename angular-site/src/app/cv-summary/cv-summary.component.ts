@@ -21,7 +21,7 @@ export class CvSummaryComponent implements OnInit {
   profileHighlights = ["Over 9 years' experience developing in the Microsoft stack", "Worked across a range of business industries and public sector projects", "Comfortable as sole developer or collaborating in team", "All around programmer: strong front-end and middle tier skills along with database experience", "Motivated to create clean, quality, tested code using modern standards", "Experience in waterfall and agile methodologies", "Keen and quick learner who is flexible to change", "Adaptable, focused, highly efficient developer with passion for excellence"];
   // Ideally these would be coming from an API and stored in a database
   technicalSkillsMatrix: Array<CvSummarySection> = [
-    { name: "Microsoft", technologies: ["C#", ".NET 4.x", "MVC", "MS SQL", "Entity Framework", "WebAPI", "WCF/Web Services", "SignalR", "LINQ", "SSIS"] },
+    { name: "Microsoft", technologies: ["C#", ".NET 4.x", ".NET Core", "MVC", "MS SQL", "Entity Framework", "WebAPI", "WCF/Web Services", "SignalR", "SSIS"] },
     { name: "Cloud", technologies: ["AWS", "Azure Web App", "Elastic Beanstalk", "DynamoDB", "Lambda", "SNS", "SQS"] },
     { name: "Front-end", technologies: ["Angular2", "KnockoutJS", "Javascript", "jQuery", "less", "KendoUI"] },
     { name: "Utilities/CMS", technologies: ["RabbitMQ", "Postsharp", "Automapper", "umbraco", "nopCommerce"] },
